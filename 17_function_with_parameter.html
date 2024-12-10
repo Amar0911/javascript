@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Function with Parameter</h2>
+
+    <script>
+
+        // function with one parameter
+
+        function one_parameter(name) {
+            document.write(name);
+        }
+        one_parameter("Javacript");
+
+        document.write("<br><br>")
+
+
+        // function with more than one parameter
+
+        function more_parameter(x,y) {
+            document.write(x+" "+y);
+        }
+        more_parameter("Version",3.8);
+        document.write("<br>")
+        more_parameter("Version");          // If function argument is missing the value is Undefined
+
+    </script>
+
+
+      <!-- function argument missing -->     
+
+    <script>
+
+        document.write("<br><br>")
+
+        document.write("Passing more values than parameter")
+
+        document.write("<br><br>")
+
+        //function with more than one parameter
+
+        function more_parameter(x,y,z) {
+            document.write("x: "+ x + ", " + "y: " + y +", "+ "z: "+z)
+        }
+        more_parameter(2,4,6)
+        
+
+    </script>
+</body>
+</html>

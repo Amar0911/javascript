@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Default Parameter</h2>
+
+    <script>    
+        
+        function default_parameter(x,y,z) {
+            console.log('x : ', x , ' y : ', y , ' z : ', z)
+        }
+        default_parameter(100,200,300)
+
+        console.log('')
+
+    </script>
+
+    <script> 
+
+
+        function default_parameter(x,y,z) {
+            console.log('x : ', x , ' y : ', y , ' z : ', z)
+        }
+        default_parameter(100,200)
+
+        console.log('')
+
+    </script>
+
+
+    <script> 
+
+        function default_parameter(x,y,z=400) {
+            console.log('x : ', x , ' y : ', y , ' z : ', z)
+        }
+        default_parameter(100,200)
+
+    </script>
+
+
+    <script> 
+
+        function default_parameter(x,y=400,z) {
+            console.log('x : ', x , ' y : ', y , ' z : ', z)
+        }
+        default_parameter(100,200)
+
+
+    </script>
+</body>
+</html>

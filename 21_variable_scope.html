@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Variable Scope</h2>
+
+    <!-- Global Scope Or Global Variable-->
+
+    <!-- <script>
+
+        var i = "Global Scope";
+        document.write( i + " Outside Function <br><br>");
+        function print() {
+            document.write(i + " Inside Function <br><br>");
+        }
+        print();
+        document.write("Below print function <br><br>")
+        document.write(i,"<br><hr>")
+
+    </script> -->
+
+     <!-- Local Scope and Local variable -->
+
+
+    <!-- <script>
+
+        function print() {
+            var j = "Local scope";
+            document.write("Inside print function : " + j + "<br><br><hr>" );
+        }
+        print();
+
+        document.write(j + "<br><br>");    // outside the function we can not call the variable of inside variable
+
+        function display() {
+            document.write("Inside Display function : " + j + "<br><br>");    // from one function variable we can not use in other function
+        }
+        display();
+
+    </script> -->
+
+    <!-- Lexical Scope(Closer) -->
+
+    <!-- <script>
+
+        function outer() {
+            var i = 'Outer function variable';
+            document.write(i, "<br><br>")
+
+            function inner() {
+                var j = 'Inner function variable';
+                document.write(j, "<br><br>")
+            }
+            inner()
+
+            document.write('Accessing outer function variable : ' + i + "<br><br><hr>")
+            document.write('Accessing inner function variable outside the inner() function : ' + j + "<br><br>")  // inside function can not be access outside the function
+
+        }
+        outer()
+        
+    </script> -->
+
+     <!-- Block scope -->
+
+     <script>
+
+        // 3rd point of Block scope i.e Variables declared with var have function scope, not block scope.
+        // means we can access value of i outside the if block.
+
+        if (true) {
+            var j = 100
+            document.write('value of var j inside function : ' + j + '<br><br>')
+        }
+        document.write('value of var j outside function : ' + j + '<br><br>')
+
+        if (true) {
+            let i = 100
+            document.write('value of let i inside function : ' + i + '<br><br>')
+        }
+        document.write('value of let i outside function : ' + i + '<br><br>')   // in let we can be access value of the function outside the function
+
+
+
+     </script>
+
+<!-- In local Scope if variable is declare with var keyword inside the function then it is a local scope 
+     or local variable.
+     If var keyword is removed inside the function then it is consider as a global scope  -->
+
+</body>
+</html>

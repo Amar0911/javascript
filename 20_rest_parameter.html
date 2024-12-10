@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Rest Parameter</h2>
+
+    <script>
+
+        function rest_parameter(a,b,...args) {
+            document.write('value of a : ', a , "<br>")
+            document.write('value of b : ', b , "<br>")
+            document.write('value of rest parameter : ',args, "<br>")
+            document.write('Accessing rest parameter through index : ', args[1],"<br>")
+        }
+        rest_parameter(1,2,3,4,5,6,7,8,9)
+    </script>
+</body>
+</html>
