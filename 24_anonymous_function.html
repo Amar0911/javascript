@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Anonymous Function</h2>
+
+    <script>
+
+        // Anonymous Function
+
+        var x = function() {
+            console.log('Anonymous Function')
+        }
+        x()
+
+        // Anonymous Function with Parameter
+
+        var x = function(a,b) {
+            console.log('Value of a : ', a)
+            console.log('Value of b : ', b)
+        }
+        x(10,20)
+
+
+        // Passing Anonymous Function as Arguments
+
+        var x = function(para) {
+            return para
+            // return para()
+        };
+
+        console.log(x(function(){
+            return "Passing Anonymous Function as Arguments"
+        }))
+
+
+
+        // Returning Anonymous Function
+
+
+        function show(x) {
+            return function(y) {
+                return x+y
+            }
+        }
+        console.log(show(10))
+        a = show(10)
+        console.log(a(10))
+
+
+
+
+    </script>
+
+
+</body>
+</html>

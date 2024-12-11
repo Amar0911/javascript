@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Arrow Function</h2>
+
+    <script>
+
+        // We cannot call Arrow Function before defining function
+
+        //arrow()
+
+        var arrow = () =>{
+            document.write('Arrow Function')
+        }
+        arrow()
+
+        document.write('<hr>')
+
+
+
+
+        // Arrow Function with single Parameter
+
+        var arrow = (x) =>{
+            document.write('Value of x : ', x)
+        }
+        arrow(100)
+
+        document.write('<hr>')
+
+
+
+        // We Wan Also Pass Value To Parameter Without paranthesis(), But For Only Single Paramter.
+        // For More Than One Parameter We Have To Use Paranthesis()
+
+        var arrow = a =>{
+            document.write('Value of a : ',a)
+        }
+        arrow(500)
+
+        document.write('<hr>')
+
+
+        // Arrow Function with Multiple Parameter
+
+        var arrow = (x,y) => {
+            document.write('Value of x,y : ', x+y)
+        }
+        arrow(100,200)
+
+        document.write('<hr>')
+
+
+
+        // We Cannot Call Arrow Function Before Defining Function
+        // If We Have Multiple Parameter Or No Parameter, then Giving Paranthesis is compulsory
+
+        var arrow = () =>{
+            document.write('Arrow Function')
+        }
+        arrow();
+
+        document.write('<hr>')
+
+
+        // Arrow Function with Rest Parameter
+
+        var arrow = (x,...args) =>{
+            document.write('Sum of x :',x ,' Value of rest parameter :', args)
+        }
+        arrow(100,110,200,210,300,310)
+
+        document.write('<hr>')
+
+
+
+        // Defininig Arrow Function In Single Line
+
+
+        var arrow = () =>{
+            document.write('Arrow Function')
+        }
+        arrow()
+
+        document.write('<hr>')
+
+        //
+
+        var arrow = (x) => document.write('1st Line Arrow Function :',x,'<br><hr>'); 
+        document.write('2nd Line Arrow Function');
+        arrow(10);
+
+
+
+    </script>
+
+
+</body>
+</html>

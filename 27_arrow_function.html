@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Arrow Function with Return</h2>
+
+    <script>
+
+        // Normal Function with Return
+
+        function add(a,b){
+            return a + b;
+        }
+        document.write('Normal Function with Return <br>')
+        document.write(add(15,16));
+
+        document.write('<hr>')
+
+
+        // Anonymous Function with return
+
+        var add1 = function(a,b){
+            return a + b;
+        }
+        document.write('Anonymous Function with Return <br>')
+        document.write(add1(25,52));
+
+        document.write('<hr>')
+
+
+        // Arrow Function with Return
+
+        var add = (a,b) =>{
+            return a + b;
+        }
+        document.write('Arrow Function with Return <br>')
+        document.write(add(45,65));
+
+        document.write('<hr>')
+
+
+        // Arrow Function with Return
+
+        var show = a =>{return a; };
+        document.write(show(10));
+
+        document.write('<hr>')
+
+
+        // If we defined in curly bracket it give undefined value
+
+        var show1 = a => a;
+        document.write(show1(15));
+
+        document.write('<hr>')
+
+
+        // Normal Function with Return
+
+        function add1(a,b){
+            return a + b;
+        }
+        document.write(add1(35,68));
+
+        document.write('<br> Defining same code in Arrow function')
+
+        document.write('<hr>')
+
+        //
+
+        a = (x,y) => x + y;
+        document.write(a(175,236))
+
+        document.write('<hr>')
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
