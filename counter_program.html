@@ -3,9 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Counter Program</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+
+        body {
+            background: linear-gradient(135deg, #1e3c72, #333); 
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+
+
+        .counter-head h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+
+
+        .counter-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+            width: 50%;
+            color: #333;
+        }
+
+
+
+        .counter-display {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(42, 82, 152);
+            border: 2px solid rgb(42, 82, 152);
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+
+        .btn-custom {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+
+
+        .btn-increase {
+            background-color: rgb(40, 167, 69); 
+            color: white;
+        }
+
+
+
+        .btn-increase:hover {
+            background-color: rgb(33, 136, 56);
+            color: white;
+        }
+
+
+
+        .btn-decrease {
+            background-color: rgb(220, 53, 69); 
+            color: white;
+        }
+
+
+        .btn-decrease:hover {
+            background-color: rgb(200, 35, 51);
+            color: white;
+        }
+
+
+
+        .btn-reset {
+            background-color: rgb(255, 193, 7); 
+            color: black;
+        }
+
+
+
+        .btn-reset:hover {
+            background-color: rgb(224, 168, 0);
+            color: black;
+        }
+
+
+
+        hr {
+            border: 1px solid white;
+            width: 70%;
+            margin: 20px auto;
+        }
+
+
+    </style>
+
+
 </head>
+
 <body>
-    
+
+
+    <div class="container text-center">
+        <div class="counter-head">
+            <h1>Counter Program</h1>
+            <hr>
+        </div>
+        <div class="counter-container">
+            <input type="number" id="value_display" class="counter-display" value="0" readonly>
+            <div class="button-group mt-4">
+                <button id="increase" class="btn btn-custom btn-increase">Increase</button>
+                <button id="reset" class="btn btn-custom btn-reset">Reset</button>
+                <button id="decrease" class="btn btn-custom btn-decrease">Decrease</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        let inc = document.getElementById('increase');
+        let res = document.getElementById('reset');
+        let dec = document.getElementById('decrease');
+        let value_display = document.getElementById('value_display');
+
+        let value = parseInt(value_display.value);
+
+        inc.onclick = function () {
+            value++;
+            value_display.value = value;
+        };
+
+        dec.onclick = function () {
+            if (value > 0) {
+                value--;
+                value_display.value = value;
+            }
+        };
+
+        res.onclick = function () {
+            value = 0;
+            value_display.value = value;
+        };
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
