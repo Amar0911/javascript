@@ -7,19 +7,53 @@
 
     <script>
 
-        function click(){
-            alert('Thank You!')
-        }
+        function handleClick() {
+                    alert('Thank You!');
+                }   
 
     </script>
 
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    </style>
+
 </head>
+
 <body>
     
+    <h1>Click Event</h1>
 
-    
+    <button type="button" onclick="handleClick()">On Click</button><br>
 
-    <button type="button" onclick="click()">On click</button>
+    <button type="button" ondblclick="handleClick()">Double Click</button><br>
+
+    <button type="button" oncontextmenu="handleClick()">On Right Click</button><br>
+
+    <button type="button" onmousedown="handleClick()">On Mouse Down</button><br>
+
+    <button type="button" onmouseup="handleClick()">On Mouse Up</button><br>
+
+    <button type="button" onmouseenter="handleClick()">On Mouse Enter</button><br>
+
+    <button type="button" onmouseleave="handleClick()">On Mouse Leave</button><br>
+
+    <button type="button" onmouseout="handleClick()">On Mouse Out</button><br>
+
+    <button type="button" onwheel="handleClick()">Mouse Wheel</button><br>
 
 </body>
 </html>
