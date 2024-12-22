@@ -65,44 +65,66 @@
 
 /* Promise */
 
-const cart = ['shoe', 'tshirt', 'jeans']
+// const cart = ['shoe', 'tshirt', 'jeans']
 
-const pr = createOrder(cart).then(
-    function(orderId){
-        console.log('oder id is', orderId);
-        return makePayment(orderId)
-    }
-)
-.then(function(paymentStatus){
-    return placeOrder(paymentStatus)
+// const pr = createOrder(cart).then(
+//     function(orderId){
+//         console.log('oder id is', orderId);
+//         return makePayment(orderId)
+//     }
+// )
+// .then(function(paymentStatus){
+//     return placeOrder(paymentStatus)
+// }
+// )
+// .catch(function(err){
+//     console.log(err.message);
+// })
+
+// function createOrder(cart){
+//     return new Promise(function(reslove, reject){
+//         let orderId = '1';
+//         reslove('Order Created!!')
+//     })
+// }
+
+// function makePayment(orderId){
+//     return new Promise(function(reslove, reject){
+//         let paymentStatus = true;
+//         if(paymentStatus){
+//             reslove(paymentStatus)
+//         }
+//         else{
+//             const err = Error("Payment Failed")
+//             reject(err)
+//         }
+//     })
+// }
+
+
+
+/* */
+
+// for ( var i=1; i<=5; i++){
+// function a(i){
+//     setTimeout(() => {
+//         console.log(i);
+//     }, i * 1000);
+// }a(i);
+// }
+
+
+
+/* interview question */
+
+function data(){
+    a = b = 5; 
 }
-)
-.catch(function(err){
-    console.log(err.message);
-})
+data();
+console.log(a);
+console.log(b);
 
-function createOrder(cart){
-    return new Promise(function(reslove, reject){
-        let orderId = '1';
-        reslove('Order Created!!')
-    })
-}
-
-function makePayment(orderId){
-    return new Promise(function(reslove, reject){
-        let paymentStatus = true;
-        if(paymentStatus){
-            reslove(paymentStatus)
-        }
-        else{
-            const err = Error("Payment Failed")
-            reject(err)
-        }
-    })
-}
-
-
-
+/* */
 
 
 
