@@ -251,9 +251,23 @@ async function fetchProfile(url) {
     avatar.alt = `${data.login}'s Avatar`;
     avatar.style.width = "150px";
     avatar.style.height = "150px";
-    avatar.style.borderRadius = "50%"
+    avatar.style.borderRadius = "50%";
+    
   
     profileDiv.appendChild(avatar)
+
+
+    const nameDiv = document.createElement('div');
+    nameDiv.className = 'detail';
+    nameDiv.innerHTML = `<strong>Name:</strong> ${data.name}`;
+    nameDiv.style.border = "2px solid black";
+    profileDiv.appendChild(nameDiv);
+
+      
+    const usernameDiv = document.createElement('div');
+    usernameDiv.className = 'detail';
+    usernameDiv.innerHTML = `<strong>Username:</strong> ${data.login}`;
+    profileDiv.appendChild(usernameDiv);
   }
   
   
