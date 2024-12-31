@@ -244,6 +244,7 @@ async function fetchProfile(url) {
       const profileDiv = document.getElementById('profile').innerText(error.message);
     }
   }
+  
   function createProfile(data) {
     const profileDiv = document.getElementById('profile')
     const avatar = document.createElement('img')
