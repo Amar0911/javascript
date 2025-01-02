@@ -206,6 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
         toCurrency.appendChild(optionTo);
       }
     })
+    
     .catch(error => {
       console.error("Error fetching data:", error);
       result.textContent = "Error fetching currency rates.";
@@ -228,6 +229,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const rates = data.rates;
         const convertedAmount = (amountValue / rates[fromValue]) * rates[toValue];
         result.textContent = `${amountValue} ${fromValue} = ${convertedAmount.toFixed(2)} ${toValue}`;
+       
+        
+        
       })
       .catch(error => {
         console.error("Error converting currency:", error);
